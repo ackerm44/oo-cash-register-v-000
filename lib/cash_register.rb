@@ -12,7 +12,7 @@ class CashRegister
     @item = item
     @quantity = quantity
     @price = price
-    
+
     subtotal = price * quantity
     @total += subtotal
   end
