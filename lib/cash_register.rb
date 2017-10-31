@@ -14,6 +14,10 @@ class CashRegister
     @quantity = quantity
     @price = price
 
+    @quantity.times do
+      @@all << @item
+    end
+
     subtotal = price * quantity
     @total += subtotal
 
@@ -29,9 +33,7 @@ class CashRegister
   end
 
   def items
-    @quantity.times do
-      @@all << @item
-    end
+  
     @@all
 
   end
