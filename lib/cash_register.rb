@@ -32,8 +32,10 @@ class CashRegister
       @quantity.times do
         @@all << @item
       end
-    else 
+    else
       @@all << item
+    end
+    @@all
 
   end
 
