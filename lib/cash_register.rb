@@ -12,12 +12,10 @@ class CashRegister
     @item = item
     @quantity = quantity
     @price = price
-    @quantity.times do
-      @@all << @item
-    end
+
     subtotal = price * quantity
     @total += subtotal
-    @@all
+
   end
 
   def apply_discount()
@@ -30,7 +28,12 @@ class CashRegister
   end
 
   def items
-    @@all
+    if @quantity > 1
+      @quantity.times do
+        @@all << @item
+      end
+    else 
+      @@all << item
 
   end
 
