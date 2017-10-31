@@ -30,15 +30,12 @@ class CashRegister
   end
 
   def items
-    @quantity.times do
-      @@all << @item
-    end
     @@all
 
   end
 
   def void_last_transaction
-    
+
   end
 
 end
