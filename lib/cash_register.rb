@@ -5,6 +5,7 @@ class CashRegister
 
   def initialize(discount = {})
     @total = 0
+    @@all = []
     @discount = discount
   end
 
@@ -28,12 +29,8 @@ class CashRegister
   end
 
   def items
-    if @quantity > 1
-      @quantity.times do
-        @@all << @item
-      end
-    else
-      @@all << item
+    @quantity.times do
+      @@all << @item
     end
     @@all
 
